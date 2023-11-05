@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom'
@@ -6,19 +6,22 @@ import CampaignIcon from '@mui/icons-material/Campaign';
 import BrandingWatermarkIcon from '@mui/icons-material/BrandingWatermark';
 import PaidIcon from '@mui/icons-material/Paid';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { AdminAuthContext } from '../utils/AdminAuthContext';
 
 
 function AdminSidebar() {
 
     const [isOpen, setIsOpen] = useState(false);
 
+    const { logout } = useContext(AdminAuthContext);
+
     const handleSidebar = () =>{
-         
         setIsOpen(!isOpen);
     }
 
     const handleLogout = (e) => {
       e.preventDefault();
+      logout();
     }
 
   return (
