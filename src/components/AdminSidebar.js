@@ -10,7 +10,7 @@ import LogoutIcon from '@mui/icons-material/Logout';
 
 function AdminSidebar() {
 
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
 
     const handleSidebar = () =>{
          
