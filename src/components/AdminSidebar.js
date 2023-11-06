@@ -50,13 +50,25 @@ function AdminSidebar() {
 
             <Link onClick={() => handleSidebar()} className="flex text-white text-sm py-2 ml-8 lg:ml-8 mr-1 align-middle gap-4 hover:text-blue-200" to={"/view_content_applications"}>
 
-                    <div style={{display: isOpen ? 'block' : 'none'}}> + Content Creators' Applications</div> 
+                    <div style={{display: isOpen ? 'block' : 'none'}}> + Pending Content Applications</div> 
 
             </Link>
 
             <Link onClick={() => handleSidebar()} className="flex text-white text-sm py-2 ml-8 lg:ml-8 mr-1 align-middle gap-4 hover:text-blue-200 mb-2" to={"/view_influencer_applications"}>
 
-                    <div style={{display: isOpen ? 'block' : 'none'}}>+ Influencer Creators' Applications</div> 
+                    <div style={{display: isOpen ? 'block' : 'none'}}>+ Pending Influencer Applications</div> 
+
+            </Link>
+
+            <Link onClick={() => handleSidebar()} className="flex text-white text-sm py-2 ml-8 lg:ml-8 mr-1 align-middle gap-4 hover:text-blue-200" to={"/approved_applicants"}>
+
+                    <div style={{display: isOpen ? 'block' : 'none'}}> + Approved Applications</div> 
+
+            </Link>
+
+            <Link onClick={() => handleSidebar()} className="flex text-white text-sm py-2 ml-8 lg:ml-8 mr-1 align-middle gap-4 hover:text-blue-200 mb-2" to={"/rejected_applicants"}>
+
+                    <div style={{display: isOpen ? 'block' : 'none'}}>+ Rejected Applications</div>
 
             </Link>
             

@@ -32,8 +32,14 @@ function DisplayContentApplications({ _id, firstName, lastName, industries, coun
 
     const navigate = useNavigate();
 
-    const handleApprove = () => {
-        fetch(`${process.env.REACT_APP_API_URL}/approve/content/${_id}`)
+    const handleApprove = (value) => {
+        fetch(`${process.env.REACT_APP_API_URL}/approve/content/${_id}`,{
+            method: 'POST',
+            headers: {
+                "Content-Type":"application/json"
+            },
+            body: JSON.stringify({ value:  value})
+        })
         .then(res => {
             if(res.ok){
                 toast.success('Success!', {
@@ -91,8 +97,10 @@ function DisplayContentApplications({ _id, firstName, lastName, industries, coun
                 {countryCode} {phoneNumber}
             </i>
             <br />
-            <div class="flex items-center justify-end">
-                <Link to={`#`} onClick={e => { e.preventDefault() ; handleApprove()}} class="text-black bg-blue-300 hover:bg-blue-400  font-bold rounded-2xl px-2 py-2.5 text-center flex align-middle text-lg gap-2">Approve </Link>
+            <div class="flex items-center justify-between mt-2">
+                <Link to={`#`} onClick={e => { e.preventDefault() ; handleApprove(1)}} class="text-black bg-blue-300 hover:bg-blue-400  font-bold rounded-2xl px-2 py-1 text-center flex align-middle text-lg gap-2">Approve </Link>
+
+                <Link to={`#`} onClick={e => { e.preventDefault() ; handleApprove(2)}} class="text-black bg-red-300 hover:bg-red-400  font-bold rounded-2xl px-2 py-1.5 text-center flex align-middle text-lg gap-2">Reject </Link>
             </div>
 
             {modalOpen && (

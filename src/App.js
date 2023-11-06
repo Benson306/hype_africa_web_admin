@@ -7,6 +7,8 @@ import SignUp from './components/pages/SignUp';
 import Dashboard from './components/pages/Dashboard';
 import { useContext } from 'react';
 import { AdminAuthContext } from './utils/AdminAuthContext';
+import ApprovedContentCreators from './components/pages/ApprovedContentCreators';
+import RejectedContentCreators from './components/pages/RejectedContentCreators';
 
 function App() {
 
@@ -77,6 +79,24 @@ function App() {
                   }
               ></Route>
 
+                <Route path="/approved_applicants" 
+                element={
+                  <>
+                  <AdminSidebar />
+                  <ApprovedContentCreators />
+                  </>
+                }
+              ></Route>
+
+              <Route path="/rejected_applicants" 
+                element={
+                  <>
+                  <AdminSidebar />
+                  <RejectedContentCreators />
+                  </>
+                }
+              ></Route>
+
               <Route path="/*" 
                 element={
                   <>
@@ -86,8 +106,6 @@ function App() {
                 }
               ></Route>
 
-
-              
           </Routes>
 
           }
