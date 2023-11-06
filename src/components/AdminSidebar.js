@@ -73,7 +73,7 @@ function AdminSidebar() {
             </Link>
             
 
-            <Link onClick={handleSidebar}  className="flex text-white py-2 align-middle gap-4 hover:text-blue-400 mb-5" to={"/discover_campaigns"}>
+            <Link onClick={handleSidebar}  className="flex text-white py-2 align-middle gap-4 hover:text-blue-400 mb-5" to={"/manage_admins"}>
                 <ManageAccountsIcon sx={{fontSize: 28}}/>
                 <div style={{display: isOpen ? 'block' : 'none'}}>Manage Admin Users</div>
             </Link>

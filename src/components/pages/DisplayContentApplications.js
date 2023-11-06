@@ -76,8 +76,8 @@ function DisplayContentApplications({ _id, firstName, lastName, industries, coun
     <div class="w-full max-w-sm bg-zinc-950 border border-gray-900 rounded-lg shadow-lg">
         <ToastContainer />
         
-        <img src={`${process.env.REACT_APP_API_URL}/uploads/${media[0]}`} class="p-0 rounded-t-lg h-52 w-full"  alt="No image Uploaded"  
-        onClick={() => openModal(0)}/>
+        { media && <img src={`${process.env.REACT_APP_API_URL}/uploads/${media[0]}`} class="p-0 rounded-t-lg h-52 w-full"  alt="No image Uploaded"  
+        onClick={() => openModal(0)}/> }
         
 
         <div class="px-5 pb-5">

@@ -9,6 +9,7 @@ import { useContext } from 'react';
 import { AdminAuthContext } from './utils/AdminAuthContext';
 import ApprovedContentCreators from './components/pages/ApprovedContentCreators';
 import RejectedContentCreators from './components/pages/RejectedContentCreators';
+import ManageAdmin from './components/pages/ManageAdmin';
 
 function App() {
 
@@ -46,6 +47,7 @@ function App() {
               <Route path="/add_user" 
                 element={
                   <>
+                  <AdminSidebar />
                   <SignUp />
                   </>
                 }
@@ -93,6 +95,15 @@ function App() {
                   <>
                   <AdminSidebar />
                   <RejectedContentCreators />
+                  </>
+                }
+              ></Route>
+
+              <Route path="/manage_admins" 
+                element={
+                  <>
+                  <AdminSidebar />
+                  <ManageAdmin />
                   </>
                 }
               ></Route>
