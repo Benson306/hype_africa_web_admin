@@ -10,6 +10,7 @@ import { AdminAuthContext } from './utils/AdminAuthContext';
 import ApprovedContentCreators from './components/pages/ApprovedContentCreators';
 import RejectedContentCreators from './components/pages/RejectedContentCreators';
 import ManageAdmin from './components/pages/ManageAdmin';
+import ManageCompanyApplications from './components/pages/ManageCompanyApplications';
 
 function App() {
 
@@ -37,6 +38,14 @@ function App() {
                 element={
                     <>
                     <Login />
+                    </>
+                  }
+                ></Route>
+
+                <Route path="/add_user" 
+                element={
+                    <>
+                    <SignUp />
                     </>
                   }
                 ></Route>
@@ -95,6 +104,15 @@ function App() {
                   <>
                   <AdminSidebar />
                   <RejectedContentCreators />
+                  </>
+                }
+              ></Route>
+
+              <Route path="/manage_company_applications" 
+                element={
+                  <>
+                  <AdminSidebar />
+                  <ManageCompanyApplications />
                   </>
                 }
               ></Route>
