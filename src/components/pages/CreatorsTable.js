@@ -17,7 +17,7 @@ const CreatorsTable = ({ data }) => {
       </div>
       <table className="w-full table-fixed border-collapse border border-blue-500">
         <thead>
-          <tr className="bg-neutral-900 text-white">
+          <tr className="bg-neutral-900 text-white text-xs">
             <th className="border border-neutral-900 py-2 px-4 w-1/5">First Name</th>
             <th className="border border-neutral-500 py-2 px-4 w-1/5">Last Name</th>
             <th className="border border-neutral-500 py-2 px-4 w-1/5">Email</th>
@@ -38,7 +38,7 @@ const CreatorsTable = ({ data }) => {
                     return user;
                 }
             }) .map((user, index) => (
-            <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-200'}>
+            <tr key={index} className={index % 2 === 0 ? 'bg-white text-sm' : 'bg-gray-200 text-sm'}>
               <td className="border border-neutral-500 py-2 px-4 w-1/5">{user.firstName}</td>
               <td className="border border-neutral-500 py-2 px-4 w-1/5">{user.lastName}</td>
               <td className="border border-neutral-500 py-2 px-4 w-1/5">{user.email}</td>

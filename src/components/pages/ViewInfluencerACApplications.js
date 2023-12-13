@@ -23,7 +23,7 @@ function ViewInfluencerACApplications() {
   return (
     <div className="w-full min-h-screen bg-neutral-300">
         <div className='p-4 ml-16 text-gray-900 font-mono'>
-          Influencer Account Applications
+          Influencer Creators Pending Approval
         </div>
         <div className='p-4 ml-16 flex flex-wrap gap-4'>
           {
