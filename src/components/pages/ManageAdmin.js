@@ -104,20 +104,20 @@ function ManageAdmin() {
           <button onClick={e => {
             e.preventDefault();
             navigate("/add_user")
-          }} className='bg-blue-500 text-white p-2 rounded-lg shadow-lg'>
+          }} className='bg-blue-500 text-white p-2 rounded-lg shadow-lg text-sm'>
             + Add New Admin User
           </button>
         <input
           type="text"
           placeholder="Search..."
-          className="p-2 border border-blue-500 rounded"
+          className="p-2 border border-blue-500 rounded text-sm"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
       </div>
       <table className="w-full table-fixed border-collapse border border-blue-500">
         <thead>
-          <tr className="bg-neutral-900 text-white">
+          <tr className="bg-neutral-900 text-white text-xs">
             <th className="border border-neutral-500 py-2 px-4 w-1/6">#</th>
             <th className="border border-neutral-500 py-2 px-4 w-2/6">Email</th>
             <th className="border border-neutral-500 py-2 px-4 w-1/6">Change Password</th>
@@ -133,7 +133,7 @@ function ManageAdmin() {
                     return user;
                 }
             }).map((user, index) => (
-            <tr key={index} className={index % 2 === 0 ? 'bg-white' : 'bg-gray-200'}>
+            <tr key={index} className={index % 2 === 0 ? 'bg-white text-center text-sm' : 'bg-gray-200 text-center text-sm'}>
             <td className="border border-neutral-500 py-2 px-4 w-1/6">{user.id}</td>
               <td className="border border-neutral-500 py-2 px-4 w-2/6">{user.email}</td>
               <td className="border border-neutral-500 py-2 px-4 w-1/6">

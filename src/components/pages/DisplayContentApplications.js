@@ -73,34 +73,34 @@ function DisplayContentApplications({ _id, firstName, lastName, industries, coun
     }
 
   return (
-    <div class="w-full max-w-sm bg-zinc-950 border border-gray-900 rounded-lg shadow-lg">
+    <div class="w-1/4 bg-zinc-950 border border-gray-900 rounded-lg shadow-lg">
         <ToastContainer />
         
-        { media && <img src={`${process.env.REACT_APP_API_URL}/uploads/${media[0]}`} class="p-0 rounded-t-lg h-52 w-full"  alt="No image Uploaded"  
+        { media && <img src={`${process.env.REACT_APP_API_URL}/uploads/${media[0]}`} class="p-0 rounded-t-lg h-32 w-full"  alt="No image Uploaded"  
         onClick={() => openModal(0)}/> }
         
 
         <div class="px-5 pb-5">
             <div className='flex justify-between items-center gap-4'>
-                <h5 class="text-2xl font-semibold tracking-tight text-white dark:text-white mt-2">{firstName} {lastName}</h5>
+                <h5 class="text-md font-semibold tracking-tight text-white dark:text-white mt-2">{firstName} {lastName}</h5>
                 
             </div>
             {
                 industries.map((ind, index) => (
-                    <div className=" text-sm font-semibold mr-2 py-0.5 rounded text-gray-400 mb-1 mt-1 capitalize" key={index}>
+                    <div className="text-xs font-semibold mr-2 py-0.5 rounded text-gray-400 mb-1 mt-1 capitalize" key={index}>
                         {ind}
                     </div>
                 ))
             }
             
-            <i className=" text-sm font-semibold mr-2 py-0.5 rounded text-lime-600 mb-1 mt-1 capitalize">
+            <i className="text-xs font-semibold mr-2 py-0.5 rounded text-lime-600 mb-1 mt-1 capitalize">
                 {countryCode} {phoneNumber}
             </i>
             <br />
             <div class="flex items-center justify-between mt-2">
-                <Link to={`#`} onClick={e => { e.preventDefault() ; handleApprove(1)}} class="text-black bg-blue-300 hover:bg-blue-400  font-bold rounded-2xl px-2 py-1 text-center flex align-middle text-lg gap-2">Approve </Link>
+                <Link to={`#`} onClick={e => { e.preventDefault() ; handleApprove(1)}} class="text-black bg-blue-500 hover:bg-blue-600 rounded-lg text-center text-sm p-1">Approve </Link>
 
-                <Link to={`#`} onClick={e => { e.preventDefault() ; handleApprove(2)}} class="text-black bg-red-300 hover:bg-red-400  font-bold rounded-2xl px-2 py-1.5 text-center flex align-middle text-lg gap-2">Reject </Link>
+                <Link to={`#`} onClick={e => { e.preventDefault() ; handleApprove(2)}} class="text-black bg-red-500 hover:bg-red-600 rounded-lg text-center text-sm p-1">Reject </Link>
             </div>
 
             {modalOpen && (

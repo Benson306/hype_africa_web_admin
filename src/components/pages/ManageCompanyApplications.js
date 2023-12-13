@@ -141,7 +141,7 @@ function ManageCompanyApplications() {
                   return 1;
                 }
               }).map((company, index) => (
-            <tr key={index} className={index % 2 === 0 ? 'bg-white text-center text-xs' : 'bg-gray-200 text-center text-xs'}>
+            <tr key={index} className={index % 2 === 0 ? 'bg-white text-center text-sm' : 'bg-gray-200 text-center text-sm'}>
             <td className="border border-neutral-500  py-1 px-4 w-1/6">
                 <img src={`${process.env.REACT_APP_API_URL}/uploads/${company.logo}`} className='h-20 w-20 object-contain' />
             </td>
@@ -152,13 +152,13 @@ function ManageCompanyApplications() {
                 {
                     company.isComplete ? 
                     <div className='flex justify-center'>
-                        <span className='bg-green-400 rounded-2xl text-black text-xs p-1'>
+                        <span className='bg-green-400 rounded-2xl text-black text-sm p-1'>
                             Complete
                         </span>
                     </div>
                     :
                     <div className='flex justify-center'>
-                        <span className='bg-red-400 rounded-2xl text-white text-xs p-1'>
+                        <span className='bg-red-400 rounded-2xl text-white text-sm p-1'>
                             Incomplete
                         </span>
                     </div>
@@ -169,19 +169,19 @@ function ManageCompanyApplications() {
               {
                     company.isApproved == 0 ? 
                     <div className='flex justify-center'>
-                        <span className='bg-blue-400 rounded-2xl text-black text-xs p-1'>
+                        <span className='bg-blue-400 rounded-2xl text-black text-sm p-1'>
                             Pending Approval
                         </span>
                     </div>
                     : company.isApproved == 1 ?
                     <div className='flex justify-center'>
-                        <span className='bg-green-400 rounded-2xl text-black text-xs p-1'>
+                        <span className='bg-green-400 rounded-2xl text-black text-sm p-1'>
                             Approved
                         </span>
                     </div> 
                     :
                     <div className='flex justify-center'>
-                        <span className='bg-red-400 rounded-2xl text-black text-xs p-1'>
+                        <span className='bg-red-400 rounded-2xl text-black text-sm p-1'>
                             Rejected
                         </span>
                     </div>
@@ -189,7 +189,7 @@ function ManageCompanyApplications() {
               </td>
 
               <td className="border border-neutral-500  py-1 px-4 w-2/6">
-                <button onClick={e =>{ e.preventDefault(); openModal(0); setSelectedData(company)}} className='bg-blue-600 hover:bg-blue-900 shadow-lg text-white rounded-lg p-2 text-xs'>
+                <button onClick={e =>{ e.preventDefault(); openModal(0); setSelectedData(company)}} className='bg-blue-600 hover:bg-blue-900 shadow-lg text-white rounded-lg p-2 text-sm'>
                     View Application
                 </button>
               </td>
