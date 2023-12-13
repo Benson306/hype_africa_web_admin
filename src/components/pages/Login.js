@@ -97,7 +97,7 @@ function Login() {
         <div class="flex flex-col items-center justify-center px-2 py-8 mx-auto md:h-screen lg:py-0">
             <div class="flex items-center mb-6 text-2xl font-semibold text-gray-900">
                 {/* <img class="w-8 h-8 mr-2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/logo.svg" alt="logo" /> */}
-                Hype Africa Web Admin 
+                Neza Web Admin 
             </div>
             <div class="rounded-lg shadow dark:border md:mt-0  xl:p-0 bg-gray-800 border-gray-700 w-5/6 lg:w-2/6">
                 <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
